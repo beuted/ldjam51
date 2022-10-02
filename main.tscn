@@ -266,6 +266,8 @@ __meta__ = {
 margin_right = 16.0
 margin_bottom = 16.0
 rect_scale = Vector2( 4, 4 )
+focus_mode = 0
+enabled_focus_mode = 0
 script = ExtResource( 15 )
 __meta__ = {
 "_edit_use_anchors_": false
