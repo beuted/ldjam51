@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/splotch.mp3-1c6fbd2b5d5f54db734114b1384a558c.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/splotch.mp3"
+dest_files=[ "res://.import/splotch.mp3-1c6fbd2b5d5f54db734114b1384a558c.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

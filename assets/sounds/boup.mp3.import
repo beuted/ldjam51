@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/boup.mp3-d827b7035bdbbc30a3a1d91b9c04a9a5.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/boup.mp3"
+dest_files=[ "res://.import/boup.mp3-d827b7035bdbbc30a3a1d91b9c04a9a5.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0
