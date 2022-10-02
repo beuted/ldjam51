@@ -8,3 +8,4 @@ export_presets.cfg
 .vs
 .idea
 data_*/
+exports/

@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=2]
+[gd_scene load_steps=36 format=2]
 
 [ext_resource path="res://tilesets/tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://assets/tiles.png" type="Texture" id=2]
@@ -14,6 +14,8 @@
 [ext_resource path="res://assets/sounds/splotch.mp3" type="AudioStream" id=12]
 [ext_resource path="res://assets/sounds/clap.mp3" type="AudioStream" id=13]
 [ext_resource path="res://assets/sounds/music.wav" type="AudioStream" id=14]
+[ext_resource path="res://MuteButton.cs" type="Script" id=15]
+[ext_resource path="res://assets/button-normal.png" type="Texture" id=16]
 
 [sub_resource type="AtlasTexture" id=2]
 atlas = ExtResource( 5 )
@@ -260,6 +262,18 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="MuteButton" type="TextureButton" parent="CanvasLayer/Interface"]
+margin_right = 16.0
+margin_bottom = 16.0
+rect_scale = Vector2( 4, 4 )
+script = ExtResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Interface/MuteButton"]
+texture = ExtResource( 16 )
+
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/Interface"]
 material = SubResource( 14 )
 anchor_left = 1.0
@@ -336,7 +350,7 @@ Grow [color=red]100[/color] tomatoes [color=blue]close to the water[/color]
 and bring them back to the village so that you can migrate
 to a more welcoming land.
 
-Arrow keys to move, space to plant a seed
+Arrow keys to move, space to plant a seed. Go back to your people to convert tomatoes to seeds.
 
 [color=red]Press space to start[/color][/center]"
 text = "Your village is on the verge of starvation
@@ -348,7 +362,7 @@ Grow 100 tomatoes close to the water
 and bring them back to the village so that you can migrate
 to a more welcoming land.
 
-Arrow keys to move, space to plant a seed
+Arrow keys to move, space to plant a seed. Go back to your people to convert tomatoes to seeds.
 
 Press space to start"
 
@@ -518,4 +532,5 @@ pitch_scale = 0.64
 stream = ExtResource( 14 )
 bus = "Music"
 
+[connection signal="pressed" from="CanvasLayer/Interface/MuteButton" to="CanvasLayer/Interface/MuteButton" method="OnClick"]
 [connection signal="body_entered" from="HomeCollider" to="HomeCollider" method="OnAreaBodyEntered"]

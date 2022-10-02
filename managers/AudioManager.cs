@@ -53,4 +53,14 @@ public class AudioManager : Node2D
   public void StopMusic() {
     _audioStreamPlayerMusic.Stop();
   }
+
+  public bool ToggleStopMusic() {
+    if (_audioStreamPlayerMusic.IsPlaying()) {
+      _audioStreamPlayerMusic.Stop();
+      return false;
+    } else {
+      _audioStreamPlayerMusic.Play();
+      return true;
+    }
+  }
 }
